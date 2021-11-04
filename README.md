@@ -58,3 +58,7 @@ pacman -S mingw-w64-x86_64-toolchain
 * https://www.willusher.io/pages/sdl2/
 * https://github.com/PolyMarsDev/Terri-Fried
 
+
+## Possible Improvements
+- [ ] To reduce code repetition of common gameplay logic blocks between psvita and windows builds, store functions such as `initBrickPositions()` and `drawBricks()` in a separate `.cpp` and `.h` file that can be reused by both psvita and windows builds
+- [ ] Create an abstraction layer of how controller inputs are received between different platforms. That is, create a generic interface that can be used to poll for input regardless of platform and create wrapper classes around the specific implementation details of the input modules (e.g. SDL2 Input system and PSVita Input system).

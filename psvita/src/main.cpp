@@ -378,17 +378,12 @@ int main(int argc, char *argv[])
 
         // RENDER UI
         {
-            // Problem Code that causes the game to crash for some reason and causes the entire PS Vita system to crash
-            // Memory leak causing ps vita to crash?
             surf = TTF_RenderText_Solid(font, std::to_string(currentScore).c_str(), textColor);
             SDL_Texture* scoreTexture = SDL_CreateTextureFromSurface(gRenderer, surf);
             SDL_Rect scoreRect{ 0, 0, 0, 0 };
             SDL_QueryTexture(scoreTexture, NULL, NULL, &(scoreRect.w), &(scoreRect.h));
             SDL_FreeSurface(surf);
             surf = NULL;
-
-            // the std::to_string().c_str() method is not the culprit
-            // the culprit maybe freeing the surface?
 
             surf = TTF_RenderText_Solid(font, std::to_string(currentLives).c_str(), textColor);
             SDL_Texture* livesTexture = SDL_CreateTextureFromSurface(gRenderer, surf);

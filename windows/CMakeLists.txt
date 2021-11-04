@@ -1,7 +1,7 @@
 # The minimum version number ps vita samples use
 cmake_minimum_required(VERSION 2.8)
 
-project(SDL_Test)
+project(breakout_clone_windows)
 
 # Windows
 set(SDL2_INCLUDE_DIR "C:/msys64/usr/include/SDL2.0.16")
@@ -27,5 +27,5 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -lmingw32 -lSDL2main -l
 set(SOURCE_FILES main.cpp)
 
 include_directories(${SDL2_INCLUDE_DIR} ${SDL2_TTF_INCLUDE_DIR})
-add_executable(SDL_Test ${SOURCE_FILES})
-target_link_libraries(SDL_Test ${SDL2_LIBRARY} ${SDL2_TTF_LIBRARY})
+add_executable(breakout_clone_windows ${SOURCE_FILES})
+target_link_libraries(breakout_clone_windows ${SDL2_LIBRARY} ${SDL2_TTF_LIBRARY})

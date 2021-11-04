@@ -9,3 +9,6 @@ Makefile
 *.self.out
 *.vpk
 *.vpk.out
+
+# Windows build folder
+mingw_build

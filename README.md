@@ -1,6 +1,7 @@
 # BreakoutClone
 Breakout Clone created for both Windows and PS Vita Platforms (Educational Purposes)
 
+![image](preview/game_preview.gif)
 ![image](preview/preview.png)
 
 ## What's needed
